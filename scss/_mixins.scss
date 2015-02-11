@@ -1,0 +1,63 @@
+@mixin center($axis: "both"){
+  position:absolute;
+  @if $axis == "y"{
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @if $axis == "x"{
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  @if $axis == "both"{
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin triangle($type, $color){
+  @if $type == "br"{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12.5px 12.5px 0 0;
+    border-color: $color transparent transparent transparent;
+  }
+
+  @if $type == "bl"{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12.5px 12.5px 0;
+    border-color: transparent $color transparent transparent;
+  }
+
+  @if $type == "tr"{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12.5px 0 0 12.5px;
+    border-color: transparent transparent transparent $color;
+  }
+
+  @if $type == "tl"{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12.5px 0 0 12.5px;
+    border-color: transparent transparent transparent $color;
+
+  }
+}
