@@ -1,5 +1,11 @@
 //config
-var devUrl = "read.dev";
+var devUrl = "url.dev";
+var jsFiles = [
+            './js/jquery-1.11.2.js', 
+            './js/main.js' 
+        ]
+var prefixString= ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'];
+
 
 // Include gulp
 var gulp = require('gulp'); 
@@ -18,7 +24,7 @@ var reload      = browserSync.reload;
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('js/*.js')
+    return gulp.src('js/main.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -28,25 +34,16 @@ gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(prefix('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(prefix(prefixString))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minifycss())
         .pipe(gulp.dest('css'))
         .pipe(reload({stream: true}));
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src([
-            './js/jquery-1.11.2.js', 
-            './js/main.js' 
-        ])
-        // .pipe(sourcemaps.init())
+    return gulp.src(jsFiles)
         .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        // .pipe(sourcemaps.write())
         .pipe(gulp.dest('js/min'))
         .pipe(reload({stream: true}));
 });
@@ -64,6 +61,27 @@ gulp.task('browser-sync', function() {
     });
 });
 
+
+
+
+
+//       PRODUCTION SETTINGS       //
+
+//Minify, uglify production ready
+gulp.task('scriptsProduction', function(){
+    return gulp.src(jsFiles)
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js/min'));
+})
+gulp.task('sassProduction', function(){
+    return gulp.src('scss/*.scss')
+        .pipe(sass())
+        .pipe(prefix(prefixString))
+        .pipe(minifycss())
+        .pipe(gulp.dest('css'));
+})
+
 // Default Task
 gulp.task('default', ['sass', 'scripts', 'browser-sync', 'watch']);
-gulp.task('lint', ['lint']);
+gulp.task('production', ['sassProduction','scriptsProduction', 'lint']);
