@@ -10,3 +10,4 @@ com_crashlytics_export_strings.xml
 .DS_Store
 .htaccess
 node_modules
+.fontcustom-manifest.json
