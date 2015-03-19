@@ -1,0 +1,48 @@
+{
+  "checksum": {
+    "previous": "3d9a771d6caf35e434361f6842ff92db1b353b072c313625cdc6cee126aaa048",
+    "current": "3d9a771d6caf35e434361f6842ff92db1b353b072c313625cdc6cee126aaa048"
+  },
+  "fonts": [
+    "./___tmp___/fontname.ttf",
+    "./___tmp___/fontname.svg",
+    "./___tmp___/fontname.woff",
+    "./___tmp___/fontname.eot"
+  ],
+  "glyphs": {
+    "test": {
+      "codepoint": 61696,
+      "source": "/Volumes/Data/joost/repositories/html5-template/assets/img/icons/test.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontname",
+    "force": true,
+    "input": {
+      "templates": "/Volumes/Data/joost/repositories/html5-template/assets/img/icons",
+      "vectors": "/Volumes/Data/joost/repositories/html5-template/assets/img/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "./___tmp___",
+      "fonts": "./___tmp___",
+      "preview": "./___tmp___"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "scss"
+    ]
+  },
+  "templates": [
+    "./___tmp___/_fontname.scss"
+  ]
+}

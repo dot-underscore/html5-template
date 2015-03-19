@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2015-3-19: Created with FontForge (http://fontforge.org)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20141231 at Thu Mar 19 16:42:59 2015
+ By Joost van Cadsand
+Copyright (c) 2015, Joost van Cadsand
+</metadata>
+<defs>
+<font id="fontname" horiz-adv-x="200" >
+  <font-face 
+    font-family="fontname"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="70.5701 0.0249153 478.569 370.88"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+0020-F100"
+  />
+    <missing-glyph />
+    <glyph glyph-name="space" unicode=" " 
+ />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="512" 
+d="M146.242 357.457l-34.1221 -53.2998c-3.30078 -5.23633 -5.63184 -10.5283 -7.2168 -16.5264l-33.2275 -127.216c-2.5293 -9.56348 -0.693359 -18.4326 5.24219 -26.3418l94.6543 -123.648c7.21875 -9.62109 19.2256 -12.7012 30.0273 -8.67773l120.681 45.4404
+c4.35645 1.70703 9.5127 3.99609 13.8477 6.43555l128.894 71.2939c13.0498 7.34082 14.8428 26.79 2.7959 36.3145l-103.769 79.0889h94.8311c15.96 0 26.2461 22.3613 14.8604 34.3389l-80.1738 85.9277c-6.40527 6.92383 -14.2402 10.293 -23.6465 10.293h-199.04
+c-10.4658 0 -18.9727 -4.73926 -24.6377 -13.4229zM174.096 335.68h194.567l56.1309 -60.1602h-102.874c-15.6045 0 -26.4131 -19.208 -17.6865 -32.5889l1.6582 -2.54395l124.127 -94.6045l-111.043 -61.4199c-1.80762 -1.01855 -7.14746 -3.46484 -9.32129 -4.31641
+l-114.146 -42.9805l-89.2256 116.557l32.6602 125.042c0.194336 0.734375 2.48633 5.97852 2.88867 6.61816z" />
+  </font>
+</defs></svg>
