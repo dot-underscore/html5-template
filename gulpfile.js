@@ -63,6 +63,7 @@ gulp.task('font', function() {
           templates: "scss"
         }))
         .pipe(gulp.dest("assets/fonts/customfont"))
+        .pipe(notify("Font regenerated!"))
 });
 
 // Watch Files For Changes

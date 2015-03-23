@@ -1,0 +1,43 @@
+//
+// Icon Font: fontname
+//
+
+@font-face {
+  font-family: "fontname";
+  src: url("./fontname.eot");
+  src: url("./fontname.eot?#iefix") format("embedded-opentype"),
+       url("./fontname.woff") format("woff"),
+       url("./fontname.ttf") format("truetype"),
+       url("./fontname.svg#fontname") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontname";
+    src: url("./fontname.svg#fontname") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-test:before {
+  display: inline-block;
+  font-family: "fontname";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-test:before { content: "\f100"; }
+
+$font-fontname-test: "\f100";
