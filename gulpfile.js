@@ -60,6 +60,7 @@ gulp.task('font', function() {
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(fontcustom({
           font_name: fontName,
+          preprocessor_path: '../fonts/customfont',
           templates: ['scss', 'preview']
         }))
         .pipe(gulp.dest("assets/fonts/customfont"))
