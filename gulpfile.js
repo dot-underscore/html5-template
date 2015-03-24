@@ -103,7 +103,7 @@ gulp.task('sassProduction', function(){
         .pipe(sass())
         .pipe(prefix(prefixString))
         .pipe(minifycss())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('assets/css'));
 })
 
 // Default Task
