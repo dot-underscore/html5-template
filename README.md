@@ -1,1 +1,1 @@
-# html5-compass-template
+# html5 Gulp template
