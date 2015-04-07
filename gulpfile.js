@@ -1,4 +1,8 @@
 //config
+//set devUrl false when there isn't any proxy!
+// var devUrl = false;
+// var devUrl = "devsite.dev";
+
 var devUrl = "template.dev";
 var fontName = "fontname";
 var jsFiles = [
@@ -78,13 +82,18 @@ gulp.task('watch', function() {
 
 //Start browser sync server
 gulp.task('browser-sync', function() {
-    browserSync({
-        proxy: devUrl
-    });
+    if(devUrl === false){
+        browserSync({
+            server: {
+                baseDir: "./"
+            }
+        }); 
+    }else{
+        browserSync({
+            proxy: devUrl    
+        });
+    }
 });
-
-
-
 
 
 //       PRODUCTION SETTINGS       //
