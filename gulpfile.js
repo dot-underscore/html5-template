@@ -3,7 +3,6 @@
 // var devUrl = false;
 // var devUrl = "devsite.dev";
 
-var devUrl = "template.dev";
 var fontName = "fontname";
 var jsFiles = [
             './assets/js/jquery-1.11.2.js', 
